@@ -29,5 +29,4 @@ labels += torch.tensor(np.random.normal(0, 0.01, size=labels.size()), dtype=torc
 d2l.set_figsize(figsize=(7, 5))
 plt.scatter(features[:, 1].numpy(), labels.numpy(), 1)
 
-os.getcwd()
 plt.show()
