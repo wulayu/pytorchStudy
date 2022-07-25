@@ -1,12 +1,12 @@
 import torch
-from IPython import display
 from matplotlib import pyplot as plt
-import matplotlib_inline.backend_inline
 import numpy as np
+import d2lzh_pytorch as d2l
+from IPython import display
+import matplotlib_inline.backend_inline
 import random
 import sys
 import os
-import d2lzh_pytorch as d2l
 
 # def use_svg_display():
 #     # 用矢量图显示
@@ -29,4 +29,10 @@ labels += torch.tensor(np.random.normal(0, 0.01, size=labels.size()), dtype=torc
 d2l.set_figsize(figsize=(7, 5))
 plt.scatter(features[:, 1].numpy(), labels.numpy(), 1)
 
-plt.show()
+# plt.show()
+
+batch_size = 10
+for X, y in d2l.data_iter(batch_size, features, labels):
+    print(X)
+    print(y)
+    break
