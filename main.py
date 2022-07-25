@@ -5,8 +5,7 @@ import matplotlib_inline.backend_inline
 import numpy as np
 import random
 import sys
-
-sys.path.append("D://")  # 为了导入上层目录的d2lzh_pytorch
+import os
 import d2lzh_pytorch as d2l
 
 # def use_svg_display():
@@ -30,4 +29,5 @@ labels += torch.tensor(np.random.normal(0, 0.01, size=labels.size()), dtype=torc
 d2l.set_figsize(figsize=(7, 5))
 plt.scatter(features[:, 1].numpy(), labels.numpy(), 1)
 
+os.getcwd()
 plt.show()
