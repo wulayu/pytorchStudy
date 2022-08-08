@@ -33,7 +33,7 @@ b.requires_grad_(requires_grad=True)
 
 batch_size = 10
 lr = 0.03
-num_epochs = 3
+num_epochs = 10
 net = d2l.linreg
 loss = d2l.squared_loss
 
