@@ -29,7 +29,7 @@ labels += torch.tensor(np.random.normal(0, 0.01, size=labels.size()), dtype=torc
 d2l.set_figsize(figsize=(7, 5))
 plt.scatter(features[:, 1].numpy(), labels.numpy(), 1)
 
-plt.show()
+plt.show()  # 用于在pycharm中运行显示图片；在Ipython环境中引用 %matplotlib inline 可以不使用plt.show
 
 batch_size = 10
 for X, y in d2l.data_iter(batch_size, features, labels):
